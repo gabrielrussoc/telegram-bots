@@ -17,3 +17,5 @@ bot.command('rir', function(message) {
     const file = new File().file('./risada.ogg').caption('bla').to(message.chat.id);
     bot.send(file);
 });
+
+module.exports = bot;

@@ -44,3 +44,5 @@ bot.get(/.*/,function(message) {
         bot.send(answer);
     }
 });
+
+module.exports = bot;
