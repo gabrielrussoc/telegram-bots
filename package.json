@@ -4,8 +4,8 @@
   "description": "testing telegram bot",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-    "start": "node appbot.js";
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodejs appbot.js"
   },
   "author": "",
   "license": "BSD-2-Clause"
