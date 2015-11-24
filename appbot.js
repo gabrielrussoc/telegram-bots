@@ -8,10 +8,24 @@ var bot = new Bot({
 bot.start();
 
 bot.get(/.+ nao .+ oq aconteceu/,function(message) {
-    var answer = new Message().text('a galera do charlie brown invadiu a cidade').to(message.chat.id);
+    var answer = new Message().text('os caras do charlie brown invadiram a cidade').to(message.chat.id);
     bot.send(answer);
 });
 
+bot.get(/viadao/,function(message){
+    var answer = new Message().text('JOAO FRANCISCO LINO DANIEL').to(message.chat.id);
+    bot.send(answer);
+});
+
+bot.get(/oi/,function(message){
+    var answer = new Message().text('fala ai meu pirocudo').to(message.chat.id);
+    bot.send(answer);
+});
+
+bot.get(/tchau/,function(message){
+    var answer = new Message().text('tchau lindao').to(message.chat.id);
+    bot.send(answer);
+});
 
 bot.command('number',function(message) {
     var answer = new Message().text('7').to(message.chat.id);
