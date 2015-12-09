@@ -3,9 +3,10 @@ var token = '133996060:AAF8PI6X5YWhtcdRWXqAmAb6zvYbmRGUOWE';
 
 var bot = new Bot(token,{polling: true});
 
-bot.on('message', function (msg) {
+bot.onText(/\/rir/, function (msg) {
   var chatId = msg.chat.id;
-  bot.sendMessage(chatId, 'eita caralho');
+  var audio = 'risada.ogg';
+  bot.sendAudio(chatId, audio);
 });
 
 module.exports = bot;

@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node lispector.js"
   },
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "telegram-api": "*"
+    "node-telegram-bot-api": "*"
   }
 }

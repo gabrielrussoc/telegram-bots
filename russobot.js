@@ -1,48 +1,27 @@
-var Bot = require('telegram-api');
-var Message = require('telegram-api/types/Message');
+var Bot = require('node-telegram-bot-api');
+var token = '133436018:AAHHVXvAkq7oIaLY2pNj4Pwhsu4pnneEG50';
 
-var bot = new Bot({
-    token : '133436018:AAG0ac3IpUGNWd-rpHbCJnseERYC-wHL3_g'
+var bot = new Bot(token,{polling: true});
+
+bot.onText(/.+ nao .+ oq aconteceu/,function(msg) {
+  var chatId = msg.chat.id;
+  bot.sendMessage(chatId,'os caras do Charlie Brown invadiram a cidade');
 });
 
-bot.start();
-
-bot.get(/.+ nao .+ oq aconteceu/,function(message) {
-    var answer = new Message().text('os caras do charlie brown invadiram a cidade').to(message.chat.id);
-    bot.send(answer);
+bot.onText(/viadao/,function(msg){
+  var chatId = msg.chat.id;
+  bot.sendMessage(chatId, 'JOAO FRANCISCO LINO DANIEL');
 });
 
-bot.get(/viadao/,function(message){
-    var answer = new Message().text('JOAO FRANCISCO LINO DANIEL').to(message.chat.id);
-    bot.send(answer);
+bot.onText(/\/number/,function(msg) {
+  var chatId = msg.chat.id;
+  bot.sendMessage(chatId, '7');
 });
 
-bot.get(/oi/,function(message){
-    var answer = new Message().text('fala ai meu pirocudo').to(message.chat.id);
-    bot.send(answer);
-});
-
-bot.get(/tchau/,function(message){
-    var answer = new Message().text('tchau lindao').to(message.chat.id);
-    bot.send(answer);
-});
-
-bot.command('number',function(message) {
-    var answer = new Message().text('7').to(message.chat.id);
-    bot.send(answer);
-});
-
-bot.command('help',function(message) {
-    var answer = new Message().text('Commands:\n /number generate a random integer').to(message.chat.id);
-    bot.send(answer);
-});
-
-bot.get(/.*/,function(message) {
-    var n = Math.random();
-    if(n < 1/10){
-        var answer = new Message().text('sim').to(message.chat.id);
-        bot.send(answer);
-    }
+bot.onText(/pergunta/,function(msg) {
+  var chatId = msg.chat.id;
+  bot.send(chatId, 'sim');
 });
 
 module.exports = bot;
+
