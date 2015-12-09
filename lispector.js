@@ -11,3 +11,5 @@ bot.on('message', function (msg) {
         bot.sendMessage(chatId,'- Clarice Lispector ',{reply_to_message_id: msgId});
     }
 });
+
+module.exports = bot;

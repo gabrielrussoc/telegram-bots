@@ -18,9 +18,9 @@ bot.onText(/\/number/,function(msg) {
   bot.sendMessage(chatId, '7');
 });
 
-bot.onText(/pergunta/,function(msg) {
+bot.onText(/.*[?].*/,function(msg) {
   var chatId = msg.chat.id;
-  bot.send(chatId, 'sim');
+  bot.sendMessage(chatId, 'sim');
 });
 
 module.exports = bot;
