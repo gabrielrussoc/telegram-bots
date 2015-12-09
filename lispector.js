@@ -5,7 +5,7 @@ var bot = new Bot(token,{polling: true});
 
 bot.on('message', function (msg) {
     var n = Math.random();
-    if(n < 1/10){
+    if(n < 1/100){
         var chatId = msg.chat.id;
         var msgId = msg.message_id;
         bot.sendMessage(chatId,'- Clarice Lispector ',{reply_to_message_id: msgId});
