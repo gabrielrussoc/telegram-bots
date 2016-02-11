@@ -6,4 +6,4 @@ var http = require('http');
 
 var server = http.createServer(function(request, response) {
   request.pipe(response);
-}).listen(process.env.PORT || 5000);
+}).listen(process.env.OPENSHIFT_NODEJS_PORT || 5000);
