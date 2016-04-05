@@ -18,6 +18,11 @@ bot.onText(/ai fox/,function(msg){
   bot.sendMessage(chatId, 'que homem');
 });
 
+bot.onText(/que homem/,function(msg){
+  var chatId = msg.chat.id;
+  bot.sendMessage(chatId, 'ai fox');
+});
+
 bot.onText(/\/number/,function(msg) {
   var chatId = msg.chat.id;
   bot.sendMessage(chatId, '7');
