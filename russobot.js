@@ -18,7 +18,7 @@ bot.onText(/\/number/,function(msg) {
   bot.sendMessage(chatId, '7');
 });
 
-bot.onText(/.*[?].*/,function(msg) {
+bot.onText(/Russo, .*[?]/,function(msg) {
   var chatId = msg.chat.id;
   bot.sendMessage(chatId, 'sim');
 });
