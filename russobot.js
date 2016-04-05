@@ -13,6 +13,11 @@ bot.onText(/viadao/,function(msg){
   bot.sendMessage(chatId, 'JOAO FRANCISCO LINO DANIEL');
 });
 
+bot.onText(/ai fox/,function(msg){
+  var chatId = msg.chat.id;
+  bot.sendMessage(chatId, 'que homem');
+});
+
 bot.onText(/\/number/,function(msg) {
   var chatId = msg.chat.id;
   bot.sendMessage(chatId, '7');
