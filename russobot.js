@@ -30,7 +30,7 @@ bot.onText(/Russo, .*[?]/,function(msg) {
 
 bot.onText(/hola/, function (msg) {
   var chatId = msg.chat.id;
-  bot.sendSticker(chatId, "AAQEABN94nAwAATmPvRJRT7k-50TAAIC");
+  bot.sendSticker(chatId, 'BQADBAADogADpxzQAeQXWGFfR8VpAg');
 });
 
 module.exports = bot;
