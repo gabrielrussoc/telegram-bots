@@ -28,5 +28,10 @@ bot.onText(/Russo, .*[?]/,function(msg) {
   bot.sendMessage(chatId, 'sim');
 });
 
+bot.onText(/hola/, function (msg) {
+  var chatId = msg.chat.id;
+  bot.sendSticker(chatId, "AAQEABN94nAwAATmPvRJRT7k-50TAAIC");
+});
+
 module.exports = bot;
 
