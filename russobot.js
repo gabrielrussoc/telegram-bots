@@ -3,7 +3,7 @@ var token = '133436018:AAHHVXvAkq7oIaLY2pNj4Pwhsu4pnneEG50';
 
 var bot = new Bot(token,{polling: true});
 
-bot.onText(/lado bom da vida/i,function(msg) {
+bot.onText(/lado bom da vida/,function(msg) {
   var chatId = msg.chat.id;
   var n = Math.random() * 9;
   var ret;
