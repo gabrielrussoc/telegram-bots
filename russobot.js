@@ -16,7 +16,7 @@ bot.onText(/lado bom da vida/i,function(msg) {
   else if (n < 7) ret = 'achar dinheiro no bolso';
   else if (n < 8) ret = 'wifi grátis';
   else ret = 'lombo no central';
-
+  bot.sendMessage(chatId, ret);
 });
 
 bot.onText(/.+ nao .+ oq aconteceu/,function(msg) {
