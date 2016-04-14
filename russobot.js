@@ -10,7 +10,7 @@ bot.onText(/lado bom da vida/,function(msg) {
   if(n < 1) ret = 'pao de alho';
   else if (n < 2) ret = 'acordar cedo e lembrar que é sábado';
   else if (n < 3) ret = 'mijar apertado';
-  else if (n < 4) ret = 'passar naf rente de uma loja com ar condicionado num dia de muito calor';
+  else if (n < 4) ret = 'passar na frente de uma loja com ar condicionado num dia de muito calor';
   else if (n < 5) ret = 'quando chega o que vc comprou pela internet';
   else if (n < 6) ret = 'quando a pizza chega rápido';
   else if (n < 7) ret = 'achar dinheiro no bolso';
@@ -22,6 +22,11 @@ bot.onText(/lado bom da vida/,function(msg) {
 bot.onText(/.+ nao .+ oq aconteceu/,function(msg) {
   var chatId = msg.chat.id;
   bot.sendMessage(chatId,'os caras do Charlie Brown invadiram a cidade');
+});
+
+bot.onText(/.*bandejao.*/,function(msg) {
+  var chatId = msg.chat.id;
+  bot.sendMessage(chatId,'não');
 });
 
 bot.onText(/viadao/,function(msg){
