@@ -24,7 +24,7 @@ bot.onText(/.+ nao .+ oq aconteceu/,function(msg) {
   bot.sendMessage(chatId,'os caras do Charlie Brown invadiram a cidade');
 });
 
-bot.onText(/.*bandejao.*/,function(msg) {
+bot.onText(/.*bande(jao|jar|co).*/,function(msg) {
   var chatId = msg.chat.id;
   bot.sendMessage(chatId,'não');
 });
