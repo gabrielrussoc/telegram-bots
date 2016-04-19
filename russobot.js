@@ -19,32 +19,27 @@ bot.onText(/lado bom da vida/i,function(msg) {
   bot.sendMessage(chatId, ret);
 });
 
-bot.onText(/.+ nao .+ oq aconteceu/,function(msg) {
+bot.onText(/.+ nao .+ oq aconteceu/i,function(msg) {
   var chatId = msg.chat.id;
   bot.sendMessage(chatId,'os caras do Charlie Brown invadiram a cidade');
 });
 
-bot.onText(/.*bande(jao|jar|co).*/,function(msg) {
+bot.onText(/.*bande(jao|jar|co).*/i,function(msg) {
   var chatId = msg.chat.id;
   bot.sendMessage(chatId,'não');
 });
 
-bot.onText(/viadao/,function(msg){
+bot.onText(/viadao/i,function(msg){
   var chatId = msg.chat.id;
   bot.sendMessage(chatId, 'JOAO FRANCISCO LINO DANIEL');
 });
 
-bot.onText(/AI FOX/,function(msg){
-  var chatId = msg.chat.id;
-  bot.sendMessage(chatId, 'VICTOR WICHMANN RAPOSO');
-});
-
-bot.onText(/ai fox/,function(msg){
+bot.onText(/ai fox/i,function(msg){
   var chatId = msg.chat.id;
   bot.sendMessage(chatId, 'que homem');
 });
 
-bot.onText(/que homem/,function(msg){
+bot.onText(/que homem/i,function(msg){
   var chatId = msg.chat.id;
   bot.sendMessage(chatId, 'ai fox');
 });
@@ -54,12 +49,12 @@ bot.onText(/\/number/,function(msg) {
   bot.sendMessage(chatId, '7');
 });
 
-bot.onText(/Russo, .*[?]/,function(msg) {
+bot.onText(/Russo, .*[?]/i,function(msg) {
   var chatId = msg.chat.id;
   bot.sendMessage(chatId, 'sim');
 });
 
-bot.onText(/hola/, function (msg) {
+bot.onText(/hola/i, function (msg) {
   var chatId = msg.chat.id;
   bot.sendSticker(chatId, 'BQADBAADogADpxzQAeQXWGFfR8VpAg');
 });
