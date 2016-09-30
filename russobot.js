@@ -49,6 +49,12 @@ bot.onText(/\/number/,function(msg) {
   bot.sendMessage(chatId, '7');
 });
 
+bot.onText(/\/rir/, function (msg) {
+  var chatId = msg.chat.id;
+  var audio = 'risada.ogg';
+  bot.sendAudio(chatId, audio);
+});
+
 bot.onText(/Russo, .*[?]/i,function(msg) {
   var chatId = msg.chat.id;
   bot.sendMessage(chatId, 'sim');
