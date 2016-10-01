@@ -58,7 +58,7 @@ bot.onText(/\/rir/, function (msg) {
 bot.onText(/\/errou/, function (msg) {
   var chatId = msg.chat.id;
   var audio = 'faustao-errou.ogg';
-  bot.sendAudio(chatId, audio);
+  bot.sendVoice(chatId, audio);
 });
 
 bot.onText(/\/treta/, function (msg) {
