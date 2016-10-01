@@ -55,6 +55,12 @@ bot.onText(/\/rir/, function (msg) {
   bot.sendAudio(chatId, audio);
 });
 
+bot.onText(/\/errou/, function (msg) {
+  var chatId = msg.chat.id;
+  var audio = 'faustao-errou.mp3';
+  bot.sendAudio(chatId, audio);
+});
+
 bot.onText(/Russo, .*[?]/i,function(msg) {
   var chatId = msg.chat.id;
   bot.sendMessage(chatId, 'sim');
