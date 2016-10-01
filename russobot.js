@@ -67,7 +67,7 @@ bot.onText(/\/treta/, function (msg) {
   bot.sendAudio(chatId, audio);
 });
 
-bot.onText(/\/hitler/, function (msg) {
+bot.onText(/\/nein/, function (msg) {
   var chatId = msg.chat.id;
   var audio = 'hitler.ogg';
   bot.sendAudio(chatId, audio);
