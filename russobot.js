@@ -57,7 +57,25 @@ bot.onText(/\/rir/, function (msg) {
 
 bot.onText(/\/errou/, function (msg) {
   var chatId = msg.chat.id;
-  var audio = 'faustao-errou.mp3';
+  var audio = 'faustao-errou.ogg';
+  bot.sendAudio(chatId, audio);
+});
+
+bot.onText(/\/treta/, function (msg) {
+  var chatId = msg.chat.id;
+  var audio = 'treta.ogg';
+  bot.sendAudio(chatId, audio);
+});
+
+bot.onText(/\/hitler/, function (msg) {
+  var chatId = msg.chat.id;
+  var audio = 'hitler.ogg';
+  bot.sendAudio(chatId, audio);
+});
+
+bot.onText(/\/cena/, function (msg) {
+  var chatId = msg.chat.id;
+  var audio = 'john-cena.ogg';
   bot.sendAudio(chatId, audio);
 });
 
