@@ -55,6 +55,12 @@ bot.onText(/\/rir/, function (msg) {
   bot.sendAudio(chatId, audio);
 });
 
+bot.onText(/\/rirmuito/, function (msg) {
+  var chatId = msg.chat.id;
+  var audio = 'risadona.ogg';
+  bot.sendAudio(chatId, audio);
+});
+
 bot.onText(/\/errou/, function (msg) {
   var chatId = msg.chat.id;
   var audio = 'faustao-errou.ogg';
