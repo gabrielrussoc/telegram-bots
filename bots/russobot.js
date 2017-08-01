@@ -1,5 +1,5 @@
 var Bot = require('node-telegram-bot-api');
-var token = '133436018:AAHHVXvAkq7oIaLY2pNj4Pwhsu4pnneEG50';
+var token = process.env.RUSSOBOT_TOKEN;
 
 var bot = new Bot(token,{polling: true});
 
@@ -24,16 +24,15 @@ bot.on('callback_query', (query) => {
     var userId = query.from.id;
     var inlineMessageId = query.inline_message_id;
     var options = {};
-    console.log(query);
     if(query.game_short_name == 'WikiGraph')
-        options.url = 'http://russoft.tech?userId=' + userId + '&inline_message_id=' + inlineMessageId;
+        options.url = 'http://russoft.tech?t_user_id=' + userId + '&t_inline_message_id=' + inlineMessageId;
 
     bot.answerCallbackQuery(id, '', false, options);
 });
 
 bot.on('inline_query', (query) => {
     var id = query.id;
-    var game = { 
+    var game = {
         type: 'game',
         id: '0',
         game_short_name: 'WikiGraph',
@@ -44,7 +43,7 @@ bot.on('inline_query', (query) => {
                     callback_game: {
                         game_short_name: 'WikiGraph'
                     }
-                }]       
+                }]
             ]
         }
     };
@@ -128,4 +127,3 @@ bot.onText(/hola/i, function (msg) {
 });
 
 module.exports = bot;
-
