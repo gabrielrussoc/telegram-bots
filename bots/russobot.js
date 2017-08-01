@@ -19,6 +19,38 @@ bot.onText(/lado bom da vida/i,function(msg) {
   bot.sendMessage(chatId, ret);
 });
 
+bot.on('callback_query', (query) => {
+    var id = query.id;
+    var userId = query.from.id;
+    var inlineMessageId = query.inline_message_id;
+    var options = {};
+    console.log(query);
+    if(query.game_short_name == 'WikiGraph')
+        options.url = 'http://russoft.tech?userId=' + userId + '&inline_message_id=' + inlineMessageId;
+
+    bot.answerCallbackQuery(id, '', false, options);
+});
+
+bot.on('inline_query', (query) => {
+    var id = query.id;
+    var game = { 
+        type: 'game',
+        id: '0',
+        game_short_name: 'WikiGraph',
+        reply_markup: {
+            inline_keyboard: [
+                [{
+                    text: 'Jogar',
+                    callback_game: {
+                        game_short_name: 'WikiGraph'
+                    }
+                }]       
+            ]
+        }
+    };
+    bot.answerInlineQuery(id, [game]);
+});
+
 bot.onText(/.+ nao .+ oq aconteceu/i,function(msg) {
   var chatId = msg.chat.id;
   bot.sendMessage(chatId,'os caras do Charlie Brown invadiram a cidade');
@@ -51,37 +83,37 @@ bot.onText(/\/number/,function(msg) {
 
 bot.onText(/\/rir/, function (msg) {
   var chatId = msg.chat.id;
-  var audio = 'risada.ogg';
+  var audio = 'audio/risada.ogg';
   bot.sendAudio(chatId, audio);
 });
 
 bot.onText(/\/rirmuito/, function (msg) {
   var chatId = msg.chat.id;
-  var audio = 'risadona.ogg';
+  var audio = 'audio/risadona.ogg';
   bot.sendAudio(chatId, audio);
 });
 
 bot.onText(/\/errou/, function (msg) {
   var chatId = msg.chat.id;
-  var audio = 'faustao-errou.ogg';
+  var audio = 'audio/faustao-errou.ogg';
   bot.sendVoice(chatId, audio);
 });
 
 bot.onText(/\/treta/, function (msg) {
   var chatId = msg.chat.id;
-  var audio = 'treta.ogg';
+  var audio = 'audio/treta.ogg';
   bot.sendAudio(chatId, audio);
 });
 
 bot.onText(/\/nein/, function (msg) {
   var chatId = msg.chat.id;
-  var audio = 'hitler.ogg';
+  var audio = 'audio/hitler.ogg';
   bot.sendAudio(chatId, audio);
 });
 
 bot.onText(/\/cena/, function (msg) {
   var chatId = msg.chat.id;
-  var audio = 'john-cena.ogg';
+  var audio = 'audio/john-cena.ogg';
   bot.sendAudio(chatId, audio);
 });
 
