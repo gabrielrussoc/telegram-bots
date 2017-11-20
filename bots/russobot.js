@@ -25,7 +25,7 @@ bot.on('callback_query', (query) => {
     var inlineMessageId = query.inline_message_id;
     var options = {};
     if(query.game_short_name == 'WikiGraph')
-        options.url = 'http://russoft.tech?t_user_id=' + userId + '&t_inline_message_id=' + inlineMessageId;
+        options.url = 'http://wikigraph.russoft.tech?t_user_id=' + userId + '&t_inline_message_id=' + inlineMessageId;
 
     bot.answerCallbackQuery(id, '', false, options);
 });
