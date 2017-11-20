@@ -11,6 +11,6 @@
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "node-telegram-bot-api": "*"
+    "node-telegram-bot-api": "0.27.0"
   }
 }
