@@ -19,13 +19,15 @@ bot.onText(/lado bom da vida/i,function(msg) {
   bot.sendMessage(chatId, ret);
 });
 
+const wikiGraphUrl = 'http://wikigraph.russoft.com.br';
+
 bot.on('callback_query', (query) => {
     var id = query.id;
     var userId = query.from.id;
     var inlineMessageId = query.inline_message_id;
     var options = {};
     if(query.game_short_name == 'WikiGraph')
-        options.url = 'http://wikigraph.russoft.tech?t_user_id=' + userId + '&t_inline_message_id=' + inlineMessageId;
+        options.url = wikiGraphUrl + '?t_user_id= ' + userId + '&t_inline_message_id=' + inlineMessageId;
 
     bot.answerCallbackQuery(id, '', false, options);
 });
